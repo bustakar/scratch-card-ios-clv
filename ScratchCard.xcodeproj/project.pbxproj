@@ -34,6 +34,10 @@
 		789C4F292A04C50D00221FEF /* ScratchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C4F282A04C50D00221FEF /* ScratchViewModelTests.swift */; };
 		789C4F2D2A04C52300221FEF /* ScratchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C4F2C2A04C52300221FEF /* ScratchViewModel.swift */; };
 		789C4F2F2A04C52900221FEF /* ScratchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C4F2E2A04C52900221FEF /* ScratchView.swift */; };
+		789C4F342A04C55500221FEF /* ActivationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C4F332A04C55500221FEF /* ActivationViewModel.swift */; };
+		789C4F362A04C55A00221FEF /* ActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C4F352A04C55A00221FEF /* ActivationView.swift */; };
+		789C4F3B2A04C57300221FEF /* ScratchCardUseCaseActivateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C4F3A2A04C57300221FEF /* ScratchCardUseCaseActivateMock.swift */; };
+		789C4F3D2A04C57D00221FEF /* ActivationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C4F3C2A04C57D00221FEF /* ActivationViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +81,10 @@
 		789C4F282A04C50D00221FEF /* ScratchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchViewModelTests.swift; sourceTree = "<group>"; };
 		789C4F2C2A04C52300221FEF /* ScratchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScratchViewModel.swift; sourceTree = "<group>"; };
 		789C4F2E2A04C52900221FEF /* ScratchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScratchView.swift; sourceTree = "<group>"; };
+		789C4F332A04C55500221FEF /* ActivationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivationViewModel.swift; sourceTree = "<group>"; };
+		789C4F352A04C55A00221FEF /* ActivationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivationView.swift; sourceTree = "<group>"; };
+		789C4F3A2A04C57300221FEF /* ScratchCardUseCaseActivateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchCardUseCaseActivateMock.swift; sourceTree = "<group>"; };
+		789C4F3C2A04C57D00221FEF /* ActivationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivationViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +156,7 @@
 		789C4EE02A04BEF200221FEF /* ScratchCard */ = {
 			isa = PBXGroup;
 			children = (
+				789C4F302A04C53E00221FEF /* Activation */,
 				789C4F222A04C4DA00221FEF /* Scratch */,
 				789C4EE12A04BEFD00221FEF /* Main */,
 			);
@@ -186,6 +195,7 @@
 		789C4EEA2A04C0E000221FEF /* ScratchCard */ = {
 			isa = PBXGroup;
 			children = (
+				789C4F372A04C55F00221FEF /* Activation */,
 				789C4F232A04C4E100221FEF /* Scratch */,
 				789C4EEB2A04C0ED00221FEF /* Main */,
 			);
@@ -365,6 +375,56 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
+		789C4F302A04C53E00221FEF /* Activation */ = {
+			isa = PBXGroup;
+			children = (
+				789C4F322A04C54D00221FEF /* Presentation */,
+				789C4F312A04C54700221FEF /* View */,
+			);
+			path = Activation;
+			sourceTree = "<group>";
+		};
+		789C4F312A04C54700221FEF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				789C4F352A04C55A00221FEF /* ActivationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		789C4F322A04C54D00221FEF /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				789C4F332A04C55500221FEF /* ActivationViewModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		789C4F372A04C55F00221FEF /* Activation */ = {
+			isa = PBXGroup;
+			children = (
+				789C4F392A04C56800221FEF /* Presentation */,
+				789C4F382A04C56300221FEF /* Mock */,
+			);
+			path = Activation;
+			sourceTree = "<group>";
+		};
+		789C4F382A04C56300221FEF /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				789C4F3A2A04C57300221FEF /* ScratchCardUseCaseActivateMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		789C4F392A04C56800221FEF /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				789C4F3C2A04C57D00221FEF /* ActivationViewModelTests.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -472,6 +532,7 @@
 				789C4EC52A04BDE500221FEF /* App.swift in Sources */,
 				789C4F092A04C3A700221FEF /* NetworkUseCase.swift in Sources */,
 				789C4F0B2A04C3AD00221FEF /* ActivationRequest.swift in Sources */,
+				789C4F362A04C55A00221FEF /* ActivationView.swift in Sources */,
 				789C4EE42A04BF0800221FEF /* Card.swift in Sources */,
 				789C4EE92A04C0AB00221FEF /* ScratchCardUseCase.swift in Sources */,
 				789C4EE82A04C0AB00221FEF /* ScratchCardRepository.swift in Sources */,
@@ -480,6 +541,7 @@
 				789C4F0F2A04C3B400221FEF /* NetworkError.swift in Sources */,
 				789C4F2D2A04C52300221FEF /* ScratchViewModel.swift in Sources */,
 				789C4F022A04C30300221FEF /* ActivationNumberDtoConverter.swift in Sources */,
+				789C4F342A04C55500221FEF /* ActivationViewModel.swift in Sources */,
 				789C4F162A04C44800221FEF /* MainViewModel.swift in Sources */,
 				789C4F2F2A04C52900221FEF /* ScratchView.swift in Sources */,
 			);
@@ -490,8 +552,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				789C4EF82A04C1B900221FEF /* ScratchCardRepositoryMock.swift in Sources */,
+				789C4F3D2A04C57D00221FEF /* ActivationViewModelTests.swift in Sources */,
 				789C4EFE2A04C27B00221FEF /* NotificationUseCaseDisplayMock.swift in Sources */,
 				789C4EF62A04C1A100221FEF /* ScratchCardUseCaseTests.swift in Sources */,
+				789C4F3B2A04C57300221FEF /* ScratchCardUseCaseActivateMock.swift in Sources */,
 				789C4F272A04C4FB00221FEF /* ScratchCardUseCaseScratchMock.swift in Sources */,
 				789C4F212A04C48A00221FEF /* MainViewModelTests.swift in Sources */,
 				789C4F1F2A04C47800221FEF /* ScratchCardUseCaseObserveCardMock.swift in Sources */,
