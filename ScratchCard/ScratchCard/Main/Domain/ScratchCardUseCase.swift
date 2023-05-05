@@ -19,7 +19,7 @@ enum ScratchCardUseCase {
 
         private let repository: ScratchCardRepository
 
-        init(repository: ScratchCardRepository) {
+        init(repository: ScratchCardRepository = ScratchCardRepositoryImpl.shared) {
             self.repository = repository
         }
 
@@ -32,7 +32,7 @@ enum ScratchCardUseCase {
 
         private let repository: ScratchCardRepository
 
-        init(repository: ScratchCardRepository) {
+        init(repository: ScratchCardRepository = ScratchCardRepositoryImpl.shared) {
             self.repository = repository
         }
 
@@ -50,7 +50,7 @@ enum ScratchCardUseCase {
         private let displayNotification: NotificationUseCaseDisplay
 
         init(
-            repository: ScratchCardRepository,
+            repository: ScratchCardRepository = ScratchCardRepositoryImpl.shared,
             displayNotification: NotificationUseCaseDisplay = NotificationUseCase.Display()
         ) {
             self.repository = repository
