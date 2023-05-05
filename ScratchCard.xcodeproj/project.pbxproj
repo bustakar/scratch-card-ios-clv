@@ -19,6 +19,11 @@
 		789C4EFE2A04C27B00221FEF /* NotificationUseCaseDisplayMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C4EFD2A04C27B00221FEF /* NotificationUseCaseDisplayMock.swift */; };
 		789C4F022A04C30300221FEF /* ActivationNumberDtoConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C4F002A04C30300221FEF /* ActivationNumberDtoConverter.swift */; };
 		789C4F032A04C30300221FEF /* ScratchCardRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C4F012A04C30300221FEF /* ScratchCardRepositoryImpl.swift */; };
+		789C4F092A04C3A700221FEF /* NetworkUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C4F082A04C3A700221FEF /* NetworkUseCase.swift */; };
+		789C4F0B2A04C3AD00221FEF /* ActivationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C4F0A2A04C3AD00221FEF /* ActivationRequest.swift */; };
+		789C4F0E2A04C3B400221FEF /* ActivationNumberDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C4F0C2A04C3B400221FEF /* ActivationNumberDto.swift */; };
+		789C4F0F2A04C3B400221FEF /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C4F0D2A04C3B400221FEF /* NetworkError.swift */; };
+		789C4F122A04C3DE00221FEF /* ActivationNumberDtoConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C4F112A04C3DE00221FEF /* ActivationNumberDtoConverterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		789C4EFD2A04C27B00221FEF /* NotificationUseCaseDisplayMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationUseCaseDisplayMock.swift; sourceTree = "<group>"; };
 		789C4F002A04C30300221FEF /* ActivationNumberDtoConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivationNumberDtoConverter.swift; sourceTree = "<group>"; };
 		789C4F012A04C30300221FEF /* ScratchCardRepositoryImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScratchCardRepositoryImpl.swift; sourceTree = "<group>"; };
+		789C4F082A04C3A700221FEF /* NetworkUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkUseCase.swift; sourceTree = "<group>"; };
+		789C4F0A2A04C3AD00221FEF /* ActivationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivationRequest.swift; sourceTree = "<group>"; };
+		789C4F0C2A04C3B400221FEF /* ActivationNumberDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivationNumberDto.swift; sourceTree = "<group>"; };
+		789C4F0D2A04C3B400221FEF /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		789C4F112A04C3DE00221FEF /* ActivationNumberDtoConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivationNumberDtoConverterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +173,7 @@
 		789C4EEB2A04C0ED00221FEF /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				789C4F102A04C3CF00221FEF /* Data */,
 				789C4EED2A04C0FC00221FEF /* Mock */,
 				789C4EEC2A04C0F100221FEF /* Domain */,
 			);
@@ -212,8 +223,44 @@
 		789C4F042A04C31100221FEF /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				789C4F072A04C39E00221FEF /* Model */,
+				789C4F062A04C39A00221FEF /* Domain */,
+				789C4F052A04C39500221FEF /* Data */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		789C4F052A04C39500221FEF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				789C4F0A2A04C3AD00221FEF /* ActivationRequest.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		789C4F062A04C39A00221FEF /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				789C4F082A04C3A700221FEF /* NetworkUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		789C4F072A04C39E00221FEF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				789C4F0C2A04C3B400221FEF /* ActivationNumberDto.swift */,
+				789C4F0D2A04C3B400221FEF /* NetworkError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		789C4F102A04C3CF00221FEF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				789C4F112A04C3DE00221FEF /* ActivationNumberDtoConverterTests.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,10 +366,14 @@
 			files = (
 				789C4F032A04C30300221FEF /* ScratchCardRepositoryImpl.swift in Sources */,
 				789C4EC52A04BDE500221FEF /* App.swift in Sources */,
+				789C4F092A04C3A700221FEF /* NetworkUseCase.swift in Sources */,
+				789C4F0B2A04C3AD00221FEF /* ActivationRequest.swift in Sources */,
 				789C4EE42A04BF0800221FEF /* Card.swift in Sources */,
 				789C4EE92A04C0AB00221FEF /* ScratchCardUseCase.swift in Sources */,
 				789C4EE82A04C0AB00221FEF /* ScratchCardRepository.swift in Sources */,
 				789C4EFC2A04C25F00221FEF /* NotificationUseCase.swift in Sources */,
+				789C4F0E2A04C3B400221FEF /* ActivationNumberDto.swift in Sources */,
+				789C4F0F2A04C3B400221FEF /* NetworkError.swift in Sources */,
 				789C4F022A04C30300221FEF /* ActivationNumberDtoConverter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +385,7 @@
 				789C4EF82A04C1B900221FEF /* ScratchCardRepositoryMock.swift in Sources */,
 				789C4EFE2A04C27B00221FEF /* NotificationUseCaseDisplayMock.swift in Sources */,
 				789C4EF62A04C1A100221FEF /* ScratchCardUseCaseTests.swift in Sources */,
+				789C4F122A04C3DE00221FEF /* ActivationNumberDtoConverterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
