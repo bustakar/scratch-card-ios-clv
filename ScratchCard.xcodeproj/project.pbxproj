@@ -30,6 +30,10 @@
 		789C4F1D2A04C46B00221FEF /* NotificationUseCaseAuthorizeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C4F1C2A04C46B00221FEF /* NotificationUseCaseAuthorizeMock.swift */; };
 		789C4F1F2A04C47800221FEF /* ScratchCardUseCaseObserveCardMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C4F1E2A04C47800221FEF /* ScratchCardUseCaseObserveCardMock.swift */; };
 		789C4F212A04C48A00221FEF /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C4F202A04C48A00221FEF /* MainViewModelTests.swift */; };
+		789C4F272A04C4FB00221FEF /* ScratchCardUseCaseScratchMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C4F262A04C4FB00221FEF /* ScratchCardUseCaseScratchMock.swift */; };
+		789C4F292A04C50D00221FEF /* ScratchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C4F282A04C50D00221FEF /* ScratchViewModelTests.swift */; };
+		789C4F2D2A04C52300221FEF /* ScratchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C4F2C2A04C52300221FEF /* ScratchViewModel.swift */; };
+		789C4F2F2A04C52900221FEF /* ScratchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C4F2E2A04C52900221FEF /* ScratchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,10 @@
 		789C4F1C2A04C46B00221FEF /* NotificationUseCaseAuthorizeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationUseCaseAuthorizeMock.swift; sourceTree = "<group>"; };
 		789C4F1E2A04C47800221FEF /* ScratchCardUseCaseObserveCardMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchCardUseCaseObserveCardMock.swift; sourceTree = "<group>"; };
 		789C4F202A04C48A00221FEF /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
+		789C4F262A04C4FB00221FEF /* ScratchCardUseCaseScratchMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchCardUseCaseScratchMock.swift; sourceTree = "<group>"; };
+		789C4F282A04C50D00221FEF /* ScratchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchViewModelTests.swift; sourceTree = "<group>"; };
+		789C4F2C2A04C52300221FEF /* ScratchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScratchViewModel.swift; sourceTree = "<group>"; };
+		789C4F2E2A04C52900221FEF /* ScratchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScratchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +148,7 @@
 		789C4EE02A04BEF200221FEF /* ScratchCard */ = {
 			isa = PBXGroup;
 			children = (
+				789C4F222A04C4DA00221FEF /* Scratch */,
 				789C4EE12A04BEFD00221FEF /* Main */,
 			);
 			path = ScratchCard;
@@ -177,6 +186,7 @@
 		789C4EEA2A04C0E000221FEF /* ScratchCard */ = {
 			isa = PBXGroup;
 			children = (
+				789C4F232A04C4E100221FEF /* Scratch */,
 				789C4EEB2A04C0ED00221FEF /* Main */,
 			);
 			path = ScratchCard;
@@ -305,6 +315,56 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
+		789C4F222A04C4DA00221FEF /* Scratch */ = {
+			isa = PBXGroup;
+			children = (
+				789C4F2B2A04C51900221FEF /* Presentation */,
+				789C4F2A2A04C51600221FEF /* View */,
+			);
+			path = Scratch;
+			sourceTree = "<group>";
+		};
+		789C4F232A04C4E100221FEF /* Scratch */ = {
+			isa = PBXGroup;
+			children = (
+				789C4F252A04C4EF00221FEF /* Presentation */,
+				789C4F242A04C4EC00221FEF /* Mock */,
+			);
+			path = Scratch;
+			sourceTree = "<group>";
+		};
+		789C4F242A04C4EC00221FEF /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				789C4F262A04C4FB00221FEF /* ScratchCardUseCaseScratchMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		789C4F252A04C4EF00221FEF /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				789C4F282A04C50D00221FEF /* ScratchViewModelTests.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		789C4F2A2A04C51600221FEF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				789C4F2E2A04C52900221FEF /* ScratchView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		789C4F2B2A04C51900221FEF /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				789C4F2C2A04C52300221FEF /* ScratchViewModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -418,8 +478,10 @@
 				789C4EFC2A04C25F00221FEF /* NotificationUseCase.swift in Sources */,
 				789C4F0E2A04C3B400221FEF /* ActivationNumberDto.swift in Sources */,
 				789C4F0F2A04C3B400221FEF /* NetworkError.swift in Sources */,
+				789C4F2D2A04C52300221FEF /* ScratchViewModel.swift in Sources */,
 				789C4F022A04C30300221FEF /* ActivationNumberDtoConverter.swift in Sources */,
 				789C4F162A04C44800221FEF /* MainViewModel.swift in Sources */,
+				789C4F2F2A04C52900221FEF /* ScratchView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,9 +492,11 @@
 				789C4EF82A04C1B900221FEF /* ScratchCardRepositoryMock.swift in Sources */,
 				789C4EFE2A04C27B00221FEF /* NotificationUseCaseDisplayMock.swift in Sources */,
 				789C4EF62A04C1A100221FEF /* ScratchCardUseCaseTests.swift in Sources */,
+				789C4F272A04C4FB00221FEF /* ScratchCardUseCaseScratchMock.swift in Sources */,
 				789C4F212A04C48A00221FEF /* MainViewModelTests.swift in Sources */,
 				789C4F1F2A04C47800221FEF /* ScratchCardUseCaseObserveCardMock.swift in Sources */,
 				789C4F1D2A04C46B00221FEF /* NotificationUseCaseAuthorizeMock.swift in Sources */,
+				789C4F292A04C50D00221FEF /* ScratchViewModelTests.swift in Sources */,
 				789C4F122A04C3DE00221FEF /* ActivationNumberDtoConverterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
