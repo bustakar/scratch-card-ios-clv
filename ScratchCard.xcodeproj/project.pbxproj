@@ -85,6 +85,7 @@
 		789C4F352A04C55A00221FEF /* ActivationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivationView.swift; sourceTree = "<group>"; };
 		789C4F3A2A04C57300221FEF /* ScratchCardUseCaseActivateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchCardUseCaseActivateMock.swift; sourceTree = "<group>"; };
 		789C4F3C2A04C57D00221FEF /* ActivationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivationViewModelTests.swift; sourceTree = "<group>"; };
+		789C4F3E2A04C9E000221FEF /* ScratchCard.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ScratchCard.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +109,7 @@
 		789C4EB82A04BDE500221FEF = {
 			isa = PBXGroup;
 			children = (
+				789C4F3E2A04C9E000221FEF /* ScratchCard.xctestplan */,
 				789C4EC32A04BDE500221FEF /* ScratchCard */,
 				789C4ED82A04BE3400221FEF /* ScratchCardTests */,
 				789C4EC22A04BDE500221FEF /* Products */,

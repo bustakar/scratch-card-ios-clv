@@ -30,7 +30,7 @@ enum NotificationUseCase {
             content.subtitle = "Code: \(code)"
             content.sound = .default
             let trigger = UNTimeIntervalNotificationTrigger(
-                timeInterval: 3,
+                timeInterval: 1,
                 repeats: false
             )
             let request = UNNotificationRequest(

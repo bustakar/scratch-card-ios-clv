@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "97FA6A2D-B065-4896-A23A-F83A1033FF12",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:ScratchCard.xcodeproj",
+      "identifier" : "789C4EC02A04BDE500221FEF",
+      "name" : "ScratchCard"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:ScratchCard.xcodeproj",
+        "identifier" : "789C4ED62A04BE3400221FEF",
+        "name" : "ScratchCardTests"
+      }
+    }
+  ],
+  "version" : 1
+}

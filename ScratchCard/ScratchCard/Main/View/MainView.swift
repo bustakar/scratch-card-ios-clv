@@ -16,9 +16,15 @@ struct MainView<ViewModel: MainViewModel>: View {
                     Text("Card has been activated")
                 }
                 HStack {
-                    Button("Scratch") { }
+                    NavigationLink(
+                        "Scratch",
+                        destination: ScratchView()
+                    )
                     .disabled(viewModel.isScratchButtonDisabled)
-                    Button("Activate") { }
+                    NavigationLink(
+                        "Activate",
+                        destination: ActivationView()
+                    )
                     .disabled(viewModel.isActivateButtonDisabled)
                 }
                 .buttonStyle(.borderedProminent)
