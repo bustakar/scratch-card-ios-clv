@@ -10,7 +10,11 @@
 		789C4EC52A04BDE500221FEF /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C4EC42A04BDE500221FEF /* App.swift */; };
 		789C4EC92A04BDE600221FEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 789C4EC82A04BDE600221FEF /* Assets.xcassets */; };
 		789C4ECD2A04BDE600221FEF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 789C4ECC2A04BDE600221FEF /* Preview Assets.xcassets */; };
-		789C4EDA2A04BE3400221FEF /* ScratchCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C4ED92A04BE3400221FEF /* ScratchCardTests.swift */; };
+		789C4EE42A04BF0800221FEF /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C4EE32A04BF0800221FEF /* Card.swift */; };
+		789C4EE82A04C0AB00221FEF /* ScratchCardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C4EE62A04C0AB00221FEF /* ScratchCardRepository.swift */; };
+		789C4EE92A04C0AB00221FEF /* ScratchCardUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C4EE72A04C0AB00221FEF /* ScratchCardUseCase.swift */; };
+		789C4EF62A04C1A100221FEF /* ScratchCardUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C4EF52A04C1A100221FEF /* ScratchCardUseCaseTests.swift */; };
+		789C4EF82A04C1B900221FEF /* ScratchCardRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C4EF72A04C1B900221FEF /* ScratchCardRepositoryMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +34,11 @@
 		789C4ECA2A04BDE600221FEF /* ScratchCard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScratchCard.entitlements; sourceTree = "<group>"; };
 		789C4ECC2A04BDE600221FEF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		789C4ED72A04BE3400221FEF /* ScratchCardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScratchCardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		789C4ED92A04BE3400221FEF /* ScratchCardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchCardTests.swift; sourceTree = "<group>"; };
+		789C4EE32A04BF0800221FEF /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		789C4EE62A04C0AB00221FEF /* ScratchCardRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScratchCardRepository.swift; sourceTree = "<group>"; };
+		789C4EE72A04C0AB00221FEF /* ScratchCardUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScratchCardUseCase.swift; sourceTree = "<group>"; };
+		789C4EF52A04C1A100221FEF /* ScratchCardUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchCardUseCaseTests.swift; sourceTree = "<group>"; };
+		789C4EF72A04C1B900221FEF /* ScratchCardRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchCardRepositoryMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,7 @@
 		789C4EC32A04BDE500221FEF /* ScratchCard */ = {
 			isa = PBXGroup;
 			children = (
+				789C4EE02A04BEF200221FEF /* ScratchCard */,
 				789C4EC42A04BDE500221FEF /* App.swift */,
 				789C4EC82A04BDE600221FEF /* Assets.xcassets */,
 				789C4ECA2A04BDE600221FEF /* ScratchCard.entitlements */,
@@ -91,9 +100,76 @@
 		789C4ED82A04BE3400221FEF /* ScratchCardTests */ = {
 			isa = PBXGroup;
 			children = (
-				789C4ED92A04BE3400221FEF /* ScratchCardTests.swift */,
+				789C4EEA2A04C0E000221FEF /* ScratchCard */,
 			);
 			path = ScratchCardTests;
+			sourceTree = "<group>";
+		};
+		789C4EE02A04BEF200221FEF /* ScratchCard */ = {
+			isa = PBXGroup;
+			children = (
+				789C4EE12A04BEFD00221FEF /* Main */,
+			);
+			path = ScratchCard;
+			sourceTree = "<group>";
+		};
+		789C4EE12A04BEFD00221FEF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				789C4EE52A04C09100221FEF /* Domain */,
+				789C4EE22A04BF0000221FEF /* Model */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		789C4EE22A04BF0000221FEF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				789C4EE32A04BF0800221FEF /* Card.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		789C4EE52A04C09100221FEF /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				789C4EE62A04C0AB00221FEF /* ScratchCardRepository.swift */,
+				789C4EE72A04C0AB00221FEF /* ScratchCardUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		789C4EEA2A04C0E000221FEF /* ScratchCard */ = {
+			isa = PBXGroup;
+			children = (
+				789C4EEB2A04C0ED00221FEF /* Main */,
+			);
+			path = ScratchCard;
+			sourceTree = "<group>";
+		};
+		789C4EEB2A04C0ED00221FEF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				789C4EED2A04C0FC00221FEF /* Mock */,
+				789C4EEC2A04C0F100221FEF /* Domain */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		789C4EEC2A04C0F100221FEF /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				789C4EF52A04C1A100221FEF /* ScratchCardUseCaseTests.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		789C4EED2A04C0FC00221FEF /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				789C4EF72A04C1B900221FEF /* ScratchCardRepositoryMock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +225,7 @@
 					};
 					789C4ED62A04BE3400221FEF = {
 						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
 						TestTargetID = 789C4EC02A04BDE500221FEF;
 					};
 				};
@@ -197,6 +274,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				789C4EC52A04BDE500221FEF /* App.swift in Sources */,
+				789C4EE42A04BF0800221FEF /* Card.swift in Sources */,
+				789C4EE92A04C0AB00221FEF /* ScratchCardUseCase.swift in Sources */,
+				789C4EE82A04C0AB00221FEF /* ScratchCardRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +284,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				789C4EDA2A04BE3400221FEF /* ScratchCardTests.swift in Sources */,
+				789C4EF82A04C1B900221FEF /* ScratchCardRepositoryMock.swift in Sources */,
+				789C4EF62A04C1A100221FEF /* ScratchCardUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +491,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -419,6 +501,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScratchCard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ScratchCard";
@@ -429,6 +512,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
