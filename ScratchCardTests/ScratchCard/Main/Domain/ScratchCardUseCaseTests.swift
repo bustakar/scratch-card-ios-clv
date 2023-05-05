@@ -43,6 +43,15 @@ final class ScratchCardUseCaseTests: XCTestCase {
         XCTAssertEqual(repository.cardInput?.isActivated, true)
     }
 
+    func test_ScratchCardUseCase_Activate_OnSuccessfulActivationNumber_ShouldNotDisplayNotification() async throws {
+        let repository = ScratchCardRepositoryMock(activationCodeResult: 6.5)
+        let notification = NotificationUseCaseDisplayMock()
+        let activate = activateUseCase(repository: repository, displayNotification: notification)
+        try await activate()
+
+        XCTAssertEqual(notification.called, 0)
+    }
+
     func test_ScratchCardUseCase_Activate_OnFalseActivationNumber_ShouldNotActivate() async throws {
         let repository = ScratchCardRepositoryMock(activationCodeResult: 4.5)
         let activate = activateUseCase(repository: repository)
@@ -51,6 +60,15 @@ final class ScratchCardUseCaseTests: XCTestCase {
         XCTAssertEqual(repository.loadCalled, 1)
         XCTAssertEqual(repository.storeCalled, 0)
         XCTAssertNil(repository.cardInput)
+    }
+
+    func test_ScratchCardUseCase_Activate_OnFalseActivationNumber_ShouldDisplayNotification() async throws {
+        let repository = ScratchCardRepositoryMock(activationCodeResult: 4.5)
+        let notification = NotificationUseCaseDisplayMock()
+        let activate = activateUseCase(repository: repository, displayNotification: notification)
+        try await activate()
+
+        XCTAssertEqual(notification.called, 1)
     }
 }
 
@@ -71,10 +89,12 @@ fileprivate func scratchUseCase(
 }
 
 fileprivate func activateUseCase(
-    repository: ScratchCardRepository = ScratchCardRepositoryMock()
+    repository: ScratchCardRepository = ScratchCardRepositoryMock(),
+    displayNotification: NotificationUseCaseDisplay = NotificationUseCaseDisplayMock()
 ) -> ScratchCardUseCaseActivate {
     ScratchCardUseCase.Activate(
-        repository: repository
+        repository: repository,
+        displayNotification: displayNotification
     )
 }
 

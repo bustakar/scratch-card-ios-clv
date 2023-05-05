@@ -47,9 +47,14 @@ enum ScratchCardUseCase {
     class Activate: ScratchCardUseCaseActivate {
 
         private let repository: ScratchCardRepository
+        private let displayNotification: NotificationUseCaseDisplay
 
-        init(repository: ScratchCardRepository) {
+        init(
+            repository: ScratchCardRepository,
+            displayNotification: NotificationUseCaseDisplay = NotificationUseCase.Display()
+        ) {
             self.repository = repository
+            self.displayNotification = displayNotification
         }
 
         func callAsFunction() async throws {
@@ -58,7 +63,9 @@ enum ScratchCardUseCase {
             if activationNumber > 6.1 {
                 card.state = .active
                 repository.store(card)
-            } 
+            } else {
+                displayNotification(card.secretCode.uuidString)
+            }
         }
     }
 }
